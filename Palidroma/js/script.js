@@ -16,10 +16,16 @@
 const parolaUtente = prompt("Ciao, inserisce una parola");
 
 function isPalidroma(parola) {
-    let parolaInversa = "";
-
+    
+let parolaInversa = "";
     for (let i = parola.length - 1; i >= 0; i--) {
-        let parolaInversa = parolaInversa + parola[i];
-        console.log (i);
+        parolaInversa = parolaInversa + parola[i];    
+    }
+    if (parola === parolaInversa) {
+        return  "La parola è palindroma";
+    } else {
+        return  "La parola non è palindroma";
     }
 } 
+const risultato = isPalidroma(parolaUtente);
+console.log (risultato);
